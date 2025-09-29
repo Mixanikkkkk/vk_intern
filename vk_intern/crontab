@@ -1,0 +1,2 @@
+*/30 * * * * root cd /app && /usr/bin/python3 /app/etl/extract.py >> /var/log/etl-extract.log 2>&1
+5 * * * * root cd /app && /usr/bin/python3 /app/etl/transform.py >> /var/log/etl-transform.log 2>&1
