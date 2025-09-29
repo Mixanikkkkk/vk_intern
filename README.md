@@ -1,21 +1,21 @@
 # vk_intern
 # Описание структуры проекта:
-ETL:
-  extract.py - скрипт для чтение raw данных и записи их в таблицу users_by_posts
-  transform.py - скрипт для определения топа пользователей 
-bd.sql - создание БД и таблиц внутри
-crontab - расписание cron
-start.sh - скрипт для логирования и запуска проекта
+ETL:    
+  extract.py - скрипт для чтение raw данных и записи их в таблицу users_by_posts    
+  transform.py - скрипт для определения топа пользователей     
+bd.sql - создание БД и таблиц внутри    
+crontab - расписание cron    
+start.sh - скрипт для логирования и запуска проекта    
 
-# Для запуска:
-1)Собираем образ
-docker build -t etl-project .
+# Для запуска:    
+1)Собираем образ    
+docker build -t etl-project .    
 
-2)Запускаем контейнер
-docker run -d --name etl-container -p 5432:5432 etl-project
+2)Запускаем контейнер   
+docker run -d --name etl-container -p 5432:5432 etl-project    
 
-3)Смотрим логи и вывод топ пользователей
-docker logs -f etl-container
+3)Смотрим логи и вывод топ пользователей    
+docker logs -f etl-container    
 
 # SQL вывод:
 Топ пользователей по постам:    
